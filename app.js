@@ -14,7 +14,25 @@ function agregarAmigo(){
     console.log(amigos);
     //Limpiar caja
     document.getElementById('amigo').value = '';
-    console.log(amigos.lenght);
-    return;
+    console.log(amigos.length);
+    //Actualizar la lista amigos en pantalla
+    listaAmigos();
+
+    //funcion para obtener elemento de la lista
+    function listaAmigos(){
+        let listaElement = document.getElementById("listaAmigos");
+        //limpiar lista existente
+        listaElement.innerHTML = "";
+        //repetir lista
+        for(let i = 0; i < amigos.length; i++){
+            console.log('listaAmigos');       
+                }
+        //creamos un nuevo elemento para cada amigo
+        let nuevoNombre = document.createElement('li');
+        nuevoNombre.textContent = amigos;
+        //agregamos los nuevos elementos a la lista
+        listaElement.appendChild(nuevoNombre);
+        console.log(nuevoNombre);
+    } 
 }
 console.log
